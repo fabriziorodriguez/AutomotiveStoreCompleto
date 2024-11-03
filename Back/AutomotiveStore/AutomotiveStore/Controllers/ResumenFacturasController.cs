@@ -11,6 +11,7 @@ namespace AutomotiveStore.Controllers
     public class ResumenFacturasController : ControllerBase
     {
         private readonly string cadenaSQL;
+
         public ResumenFacturasController(IConfiguration config)
         {
             cadenaSQL = config.GetConnectionString("CadenaSQL");
@@ -30,7 +31,7 @@ namespace AutomotiveStore.Controllers
                     var cmd = new SqlCommand("sp_resumen_facturas", conexion);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Mes", mes);
-                    cmd.Parameters.AddWithValue("@Anio", anio ?? DateTime.Now.Year); 
+                    cmd.Parameters.AddWithValue("@Anio", anio ?? DateTime.Now.Year);
 
                     using (var reader = cmd.ExecuteReader())
                     {
@@ -38,9 +39,9 @@ namespace AutomotiveStore.Controllers
                         {
                             resultado = new ResumenFacturas
                             {
-                                TotalFacturas = Convert.ToInt32(reader["TOTAL DE FACTURAS"]),
-                                CantidadArticulosVendidos = Convert.ToInt32(reader["CANTIDAD DE ARTICULOS VENDIDOS"]),
-                                CostoTotal = Convert.ToDecimal(reader["COSTO TOTAL"])
+                                TotalFacturas = reader["TOTAL DE FACTURAS"] != DBNull.Value ? Convert.ToInt32(reader["TOTAL DE FACTURAS"]) : 0,
+                                CantidadArticulosVendidos = reader["CANTIDAD DE ARTICULOS VENDIDOS"] != DBNull.Value ? Convert.ToInt32(reader["CANTIDAD DE ARTICULOS VENDIDOS"]) : 0,
+                                CostoTotal = reader["COSTO TOTAL"] != DBNull.Value ? Convert.ToDecimal(reader["COSTO TOTAL"]) : 0m
                             };
                         }
                     }
@@ -53,6 +54,6 @@ namespace AutomotiveStore.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, new { mensaje = error.Message, Response = resultado });
             }
         }
-
     }
+
 }

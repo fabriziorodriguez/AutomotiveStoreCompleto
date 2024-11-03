@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen de Facturas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Estilo del formulario */
+        #formulario {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #6c757d;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .form-group label, .form-group input {
+            color: white;
+        }
+
+        /* Estilo de la tabla */
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border: 1px solid #dee2e6;
+        }
+        .custom-table th, .custom-table td {
+            padding: 8px;
+            border-bottom: 1px solid #dee2e6;
+            border-right: 1px solid #dee2e6;
+        }
+        .custom-table th {
+            background-color: #343a40;
+            color: white;
+        }
+        .custom-table tbody tr:nth-child(odd) {
+            background-color: #f8f9fa;
+        }
+        .custom-table tbody tr:nth-child(even) {
+            background-color: #e9ecef;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Resumen de Facturas</h1>
+
+        <!-- Formulario para obtener datos del resumen de facturas -->
+        <div id="formulario" class="mt-4">
+            <h2>Consultar Resumen</h2>
+            <div class="form-group">
+                <label for="mes">Mes:</label>
+                <input type="number" class="form-control" id="mes" min="1" max="12" required>
+            </div>
+            <div class="form-group">
+                <label for="anio">Año (opcional):</label>
+                <input type="number" class="form-control" id="anio" placeholder="2024">
+            </div>
+            <button class="btn btn-primary" onclick="obtenerResumenFacturas()">Obtener Resumen</button>
+        </div>
+
+        <div id="resultado" class="mt-4"></div>
+    </div>
+
+    <script>
+        async function obtenerResumenFacturas() {
+            const mes = document.getElementById("mes").value;
+            const anio = document.getElementById("anio").value;
+
+            // Construir la URL de la API
+            const url = `http://localhost:5009/api/ResumenFacturas/ResumenFacturas?mes=${mes}&anio=${anio}`;
+            console.log("URL de la API:", url); // Para depuración
+
+            try {
+                const response = await fetch(url);
+                console.log("Estado de respuesta:", response.status); // Mostrar el estado
+
+                if (!response.ok) {
+                    throw new Error(`Error en la solicitud: ${response.statusText}`);
+                }
+                
+                const data = await response.json();
+                console.log("Respuesta de la API:", data); // Para depuración
+
+                // Verificar si data.mensaje es "ok" y si data.response existe
+                if (data.mensaje === "ok" && data.response) {
+                    document.getElementById("resultado").innerHTML = `
+                        <h3>Resumen de Facturas</h3>
+                        <table class="custom-table">
+                            <thead>
+                                <tr>
+                                    <th>Total de Facturas</th>
+                                    <th>Cantidad de Artículos Vendidos</th>
+                                    <th>Costo Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>${data.response.totalFacturas}</td>
+                                    <td>${data.response.cantidadArticulosVendidos}</td>
+                                    <td>${data.response.costoTotal.toFixed(2)}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    `;
+                } else {
+                    document.getElementById("resultado").innerHTML = `<p>No se encontró el resumen de facturas.</p>`;
+                }
+            } catch (error) {
+                document.getElementById("resultado").innerHTML = `<p>Error: ${error.message}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

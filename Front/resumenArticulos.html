@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen de Artículos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Estilo del formulario */
+        #formulario {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #6c757d;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .form-group label, .form-group input {
+            color: white;
+        }
+
+        /* Estilo de la tabla */
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border: 1px solid #dee2e6;
+        }
+        .custom-table th, .custom-table td {
+            padding: 8px;
+            border-bottom: 1px solid #dee2e6;
+            border-right: 1px solid #dee2e6;
+        }
+        .custom-table th {
+            background-color: #343a40;
+            color: white;
+        }
+        .custom-table tbody tr:nth-child(odd) {
+            background-color: #f8f9fa;
+        }
+        .custom-table tbody tr:nth-child(even) {
+            background-color: #e9ecef;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Resumen de Artículos</h1>
+
+        <!-- Formulario para obtener datos del resumen de artículos -->
+        <div id="formulario" class="mt-4">
+            <h2>Consultar Resumen</h2>
+            <div class="form-group">
+                <label for="cantidadMinima">Cantidad Mínima:</label>
+                <input type="number" class="form-control" id="cantidadMinima" required>
+            </div>
+            <div class="form-group">
+                <label for="letraInicio">Letra de Inicio:</label>
+                <input type="text" class="form-control" id="letraInicio" maxlength="1" required>
+            </div>
+            <div class="form-group">
+                <label for="letraFin">Letra de Fin:</label>
+                <input type="text" class="form-control" id="letraFin" maxlength="1" required>
+            </div>
+            <button class="btn btn-primary" onclick="obtenerResumenArticulos()">Obtener Resumen</button>
+        </div>
+
+        <div id="resultado" class="mt-4"></div>
+    </div>
+
+    <script>
+        async function obtenerResumenArticulos() {
+            const cantidadMinima = document.getElementById("cantidadMinima").value;
+            const letraInicio = document.getElementById("letraInicio").value;
+            const letraFin = document.getElementById("letraFin").value;
+
+            // Construir la URL de la API
+            const url = `http://localhost:5009/api/ArticuloResumen/ResumenArticulos?cantidadMinima=${cantidadMinima}&letraInicio=${letraInicio}&letraFin=${letraFin}`;
+            console.log("URL de la API:", url); // Para depuración
+
+            try {
+                const response = await fetch(url);
+                console.log("Estado de respuesta:", response.status); // Mostrar el estado
+
+                if (!response.ok) {
+                    throw new Error(`Error en la solicitud: ${response.statusText}`);
+                }
+                
+                const data = await response.json();
+                console.log("Respuesta de la API:", data); // Para depuración
+
+                // Verificar si data.mensaje es "ok" y si data.response existe
+                if (data.mensaje === "ok" && Array.isArray(data.response) && data.response.length > 0) {
+                    const resultadosHtml = data.response.map(articulo => `
+                        <tr>
+                            <td>${articulo.articulo}</td>
+                            <td>${articulo.tipoArticulo}</td>
+                            <td>${articulo.costoTotal.toFixed(2)}</td>
+                            <td>${articulo.promedioCantidadVendida}</td>
+                        </tr>
+                    `).join('');
+
+                    document.getElementById("resultado").innerHTML = `
+                        <h3>Resumen de Artículos</h3>
+                        <table class="custom-table">
+                            <thead>
+                                <tr>
+                                    <th>Artículo</th>
+                                    <th>Tipo de Artículo</th>
+                                    <th>Costo Total</th>
+                                    <th>Promedio Cantidad Vendida</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${resultadosHtml}
+                            </tbody>
+                        </table>
+                    `;
+                } else {
+                    document.getElementById("resultado").innerHTML = `<p>No se encontraron artículos que coincidan con los criterios.</p>`;
+                }
+            } catch (error) {
+                document.getElementById("resultado").innerHTML = `<p>Error: ${error.message}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
+
