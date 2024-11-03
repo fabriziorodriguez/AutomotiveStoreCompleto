@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Consumo de API ASP.NET Core</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Estilo del formulario */
+        #formulario {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #6c757d;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .form-group label, .form-group input, .form-check-label {
+            color: white;
+        }
+
+        /* Estilo de la tabla */
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border: 1px solid #dee2e6;
+        }
+        .custom-table th, .custom-table td {
+            padding: 8px;
+            border-bottom: 1px solid #dee2e6;
+            border-right: 1px solid #dee2e6; /* Línea vertical entre columnas */
+        }
+        .custom-table th:last-child, .custom-table td:last-child {
+            border-right: none; /* Quitar borde de la última columna */
+        }
+        .custom-table th {
+            background-color: #343a40;
+            color: white;
+        }
+        .custom-table tbody tr:nth-child(odd) {
+            background-color: #f8f9fa;
+        }
+        .custom-table tbody tr:nth-child(even) {
+            background-color: #e9ecef;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Consumo de la API ASP.NET Core</h1>
+        
+        <button class="btn btn-primary mt-3" onclick="obtenerDatos()">Obtener Datos de la API</button>
+        <button class="btn btn-success mt-3" onclick="mostrarFormulario()">Agregar Nuevo Producto</button>
+        
+        <!-- Formulario para agregar un nuevo producto -->
+        <div id="formulario" class="mt-4">
+            <h2>Agregar Producto</h2>
+            <div class="form-group">
+                <label for="name">Nombre del producto:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Precio:</label>
+                <input type="number" class="form-control" id="price" name="price" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="stock">Stock:</label>
+                <input type="number" class="form-control" id="stock" name="stock" required>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="isActive" name="isActive">
+                <label class="form-check-label" for="isActive">Activo</label>
+            </div>
+            <div class="form-group">
+                <label for="idArticulesTypes">ID de tipo de artículo:</label>
+                <input type="number" class="form-control" id="idArticulesTypes" name="idArticulesTypes">
+            </div>
+
+            <button class="btn btn-primary" onclick="guardarProducto()">Guardar Producto</button>
+        </div>
+
+        <div id="resultado" class="mt-4"></div>
+    </div>
+
+    <script>
+        async function obtenerDatos() {
+            const resultado = document.getElementById('resultado');
+            resultado.innerHTML = ''; // Limpiar contenido previo
+
+            try {
+                const respuesta = await fetch('http://localhost:5009/api/Producto/Listar'); // Cambia la URL según tu API
+                if (respuesta.ok) {
+                    const datos = await respuesta.json();
+                    console.log("Datos obtenidos de la API:", datos); // Imprimir los datos en la consola
+                    
+                    const productos = datos.response;
+
+                    if (Array.isArray(productos) && productos.length > 0) {
+                        mostrarDatos(productos);
+                    } else {
+                        resultado.textContent = 'La API no devolvió datos válidos en formato de arreglo.';
+                    }
+                } else {
+                    resultado.textContent = 'Error en la respuesta de la API: ' + respuesta.status;
+                }
+            } catch (error) {
+                console.error('Error al conectar con la API:', error);
+                resultado.textContent = 'No se pudo conectar a la API';
+            }
+        }
+
+        function mostrarDatos(datos) {
+            const resultado = document.getElementById('resultado');
+            resultado.innerHTML = ''; // Limpiar el contenido previo
+
+            const tabla = document.createElement('table');
+            tabla.classList.add('custom-table');
+            const encabezado = document.createElement('tr');
+            
+            Object.keys(datos[0]).forEach(key => {
+                const th = document.createElement('th');
+                th.textContent = key;
+                encabezado.appendChild(th);
+            });
+            let th = document.createElement('th');
+            th.textContent = 'Acciones';
+            encabezado.appendChild(th);
+            tabla.appendChild(encabezado);
+
+            datos.forEach(item => {
+                const fila = document.createElement('tr');
+                Object.values(item).forEach(value => {
+                    const td = document.createElement('td');
+                    td.textContent = value;
+                    fila.appendChild(td);
+                });
+                
+                // Columna de acciones
+                const tdAcciones = document.createElement('td');
+                const btnEliminar = document.createElement('button');
+                btnEliminar.textContent = 'Eliminar';
+                btnEliminar.classList.add('btn', 'btn-danger');
+                btnEliminar.onclick = () => eliminarProducto(item.id);
+                tdAcciones.appendChild(btnEliminar);
+                
+                fila.appendChild(tdAcciones);
+                tabla.appendChild(fila);
+            });
+
+            resultado.appendChild(tabla);
+        }
+
+        function mostrarFormulario() {
+            document.getElementById('formulario').style.display = 'block';
+            document.getElementById('formulario').reset();
+        }
+
+        async function guardarProducto() {
+            const name = document.getElementById('name').value;
+            const price = parseFloat(document.getElementById('price').value);
+            const stock = parseInt(document.getElementById('stock').value, 10);
+            const isActive = document.getElementById('isActive').checked;
+            const idArticulesTypes = parseInt(document.getElementById('idArticulesTypes').value, 10);
+
+            const producto = {
+                Name: name,
+                Price: price,
+                Stock: stock,
+                IsActive: isActive,
+                IdArticulesTypes: idArticulesTypes
+            };
+
+            try {
+                const respuesta = await fetch('http://localhost:5009/api/Producto/Guardar', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(producto)
+                });
+
+                if (respuesta.ok) {
+                    alert('Producto guardado exitosamente');
+                    obtenerDatos(); // Actualizar la lista de productos
+                    document.getElementById('formulario').style.display = 'none'; // Ocultar el formulario
+                } else {
+                    alert('Error al guardar el producto');
+                }
+            } catch (error) {
+                console.error('Error al conectar con la API:', error);
+                alert('No se pudo conectar a la API');
+            }
+        }
+
+        async function eliminarProducto(idProducto) {
+            const confirmacion = confirm('¿Estás seguro de que deseas eliminar este producto?');
+            if (!confirmacion) return;
+
+            try {
+                const respuesta = await fetch(`http://localhost:5009/api/Producto/Eliminar/${idProducto}`, {
+                    method: 'DELETE'
+                });
+
+                if (respuesta.ok) {
+                    alert('Producto eliminado exitosamente');
+                    obtenerDatos(); // Actualizar la lista de productos
+                } else {
+                    alert('Error al eliminar el producto');
+                }
+            } catch (error) {
+                console.error('Error al conectar con la API:', error);
+                alert('No se pudo conectar a la API');
+            }
+        }
+    </script>
+</body>
+</html>
+

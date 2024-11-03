@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Servicios Adicionales Más Vendidos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Estilo del formulario */
+        #formulario {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #6c757d;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .form-group label, .form-group input {
+            color: white;
+        }
+
+        /* Estilo de la tabla */
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border: 1px solid #dee2e6;
+        }
+        .custom-table th, .custom-table td {
+            padding: 8px;
+            border-bottom: 1px solid #dee2e6;
+            border-right: 1px solid #dee2e6;
+        }
+        .custom-table th {
+            background-color: #343a40;
+            color: white;
+        }
+        .custom-table tbody tr:nth-child(odd) {
+            background-color: #f8f9fa;
+        }
+        .custom-table tbody tr:nth-child(even) {
+            background-color: #e9ecef;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Servicios Adicionales Más Vendidos</h1>
+        
+        <!-- Formulario para obtener datos de servicios -->
+        <div id="formulario" class="mt-4">
+            <h2>Consultar Servicios</h2>
+            <div class="form-group">
+                <label for="startMonth">Mes de Inicio:</label>
+                <input type="number" class="form-control" id="startMonth" name="startMonth" placeholder="1" required>
+            </div>
+            <div class="form-group">
+                <label for="endMonth">Mes de Fin:</label>
+                <input type="number" class="form-control" id="endMonth" name="endMonth" placeholder="12" required>
+            </div>
+            <button class="btn btn-primary" onclick="obtenerServicios()">Consultar Servicios</button>
+        </div>
+
+        <div id="resultado" class="mt-4"></div>
+    </div>
+
+    <script>
+        async function obtenerServicios() {
+            const resultado = document.getElementById('resultado');
+            resultado.innerHTML = ''; // Limpiar contenido previo
+
+            const startMonth = document.getElementById('startMonth').value;
+            const endMonth = document.getElementById('endMonth').value;
+
+            try {
+                const respuesta = await fetch(`http://localhost:5009/api/ServicioAdicional/TopServicioAdicional?startMonth=${startMonth}&endMonth=${endMonth}`, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                if (respuesta.ok) {
+                    const datos = await respuesta.json();
+                    const servicios = datos.Response;
+
+                    if (Array.isArray(servicios) && servicios.length > 0) {
+                        mostrarDatos(servicios);
+                    } else {
+                        resultado.textContent = 'No se encontraron datos para los meses seleccionados.';
+                    }
+                } else {
+                    resultado.textContent = 'Error en la respuesta de la API: ' + respuesta.status;
+                }
+            } catch (error) {
+                console.error('Error al conectar con la API:', error);
+                resultado.textContent = 'No se pudo conectar a la API';
+            }
+        }
+
+        function mostrarDatos(datos) {
+            const resultado = document.getElementById('resultado');
+            resultado.innerHTML = ''; // Limpiar el contenido previo
+
+            const tabla = document.createElement('table');
+            tabla.classList.add('custom-table');
+            const encabezado = document.createElement('tr');
+            
+            // Crear encabezados de la tabla
+            const headers = ['ID', 'Servicio', 'Cantidad'];
+            headers.forEach(header => {
+                const th = document.createElement('th');
+                th.textContent = header;
+                encabezado.appendChild(th);
+            });
+            tabla.appendChild(encabezado);
+
+            // Llenar la tabla con los datos
+            datos.forEach(item => {
+                const fila = document.createElement('tr');
+                
+                const tdId = document.createElement('td');
+                tdId.textContent = item.Id;
+                fila.appendChild(tdId);
+
+                const tdServicio = document.createElement('td');
+                tdServicio.textContent = item.DescripcionServicio;
+                fila.appendChild(tdServicio);
+
+                const tdCantidad = document.createElement('td');
+                tdCantidad.textContent = item.Cantidad;
+                fila.appendChild(tdCantidad);
+
+                tabla.appendChild(fila);
+            });
+
+            resultado.appendChild(tabla);
+        }
+    </script>
+</body>
+</html>
