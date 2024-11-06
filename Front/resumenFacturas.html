@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resumen de Facturas</title>
+    <title>Resumen de Facturas y Vendedores</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         /* Estilo del formulario */
-        #formulario {
+        .form-container, #formulario {
             margin-top: 20px;
             padding: 20px;
-            background-color: #6c757d;
-            color: white;
+            background-color: #f98d6b;
+            color: black;
             border-radius: 8px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
-        .form-group label, .form-group input {
-            color: white;
+        .form-group label, .form-group input, .form-check-label {
+            color: black;
         }
 
         /* Estilo de la tabla */
@@ -45,11 +45,11 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="mt-4">Resumen de Facturas</h1>
+        <h1 class="mt-4">Resumen de Facturas, Ventas y Vendedores</h1>
 
         <!-- Formulario para obtener datos del resumen de facturas -->
-        <div id="formulario" class="mt-4">
-            <h2>Consultar Resumen</h2>
+        <div class="form-container">
+            <h2>Consultar Resumen de Facturas</h2>
             <div class="form-group">
                 <label for="mes">Mes:</label>
                 <input type="number" class="form-control" id="mes" min="1" max="12" required>
@@ -60,57 +60,157 @@
             </div>
             <button class="btn btn-primary" onclick="obtenerResumenFacturas()">Obtener Resumen</button>
         </div>
+        <div id="resultadoFacturas" class="mt-4"></div>
 
+        <!-- Formulario para obtener datos del resumen de vendedores -->
+        <div class="form-container mt-4">
+            <h2>Consultar Resumen de Vendedores</h2>
+            <div class="form-group">
+                <label for="fechaInicio">Fecha de Inicio:</label>
+                <input type="date" class="form-control" id="fechaInicio" required>
+            </div>
+            <div class="form-group">
+                <label for="fechaFin">Fecha de Fin:</label>
+                <input type="date" class="form-control" id="fechaFin" required>
+            </div>
+            <button class="btn btn-primary" onclick="obtenerResumenVendedores()">Obtener Resumen de Vendedores</button>
+        </div>
+        <div id="resultadoVendedores" class="mt-4"></div>
+
+        <!-- Formulario para obtener datos de ventas -->
+        <div id="formulario" class="mt-4">
+            <h2>Consultar Resumen de Ventas</h2>
+            <div class="form-group">
+                <label for="fechaInicio">Fecha de Inicio:</label>
+                <input type="date" class="form-control" id="fechaInicio" name="fechaInicio" required>
+            </div>
+            <div class="form-group">
+                <label for="fechaFin">Fecha de Fin:</label>
+                <input type="date" class="form-control" id="fechaFin" name="fechaFin" required>
+            </div>
+            <div class="form-group">
+                <label for="nacionalidadCliente">Nacionalidad del Cliente:</label>
+                <input type="text" class="form-control" id="nacionalidadCliente" name="nacionalidadCliente" placeholder="Ingrese nacionalidad">
+            </div>
+            <div class="form-group">
+                <label for="precioMinimo">Precio Mínimo:</label>
+                <input type="number" class="form-control" id="precioMinimo" name="precioMinimo" placeholder="Ingrese precio mínimo">
+            </div>
+            <div class="form-group">
+                <label for="metodosPago">Métodos de Pago:</label>
+                <input type="text" class="form-control" id="metodosPago" name="metodosPago" placeholder="Ingrese métodos de pago">
+            </div>
+            <button class="btn btn-primary" onclick="obtenerResumenVentas()">Consultar Resumen</button>
+        </div>
         <div id="resultado" class="mt-4"></div>
     </div>
 
     <script>
+        // Función para obtener el resumen de facturas
         async function obtenerResumenFacturas() {
             const mes = document.getElementById("mes").value;
             const anio = document.getElementById("anio").value;
-
-            // Construir la URL de la API
-            const url = `http://localhost:5009/api/ResumenFacturas/ResumenFacturas?mes=${mes}&anio=${anio}`;
-            console.log("URL de la API:", url); // Para depuración
+            const url = `http://localhost:5009/api/ResumenFacturas/ContarFacturas?mes=${mes}&anio=${anio}`;
 
             try {
                 const response = await fetch(url);
-                console.log("Estado de respuesta:", response.status); // Mostrar el estado
+                if (!response.ok) throw new Error(`Error en la solicitud: ${response.statusText}`);
 
-                if (!response.ok) {
-                    throw new Error(`Error en la solicitud: ${response.statusText}`);
-                }
-                
                 const data = await response.json();
-                console.log("Respuesta de la API:", data); // Para depuración
-
-                // Verificar si data.mensaje es "ok" y si data.response existe
                 if (data.mensaje === "ok" && data.response) {
-                    document.getElementById("resultado").innerHTML = `
+                    document.getElementById("resultadoFacturas").innerHTML = `
                         <h3>Resumen de Facturas</h3>
                         <table class="custom-table">
-                            <thead>
-                                <tr>
-                                    <th>Total de Facturas</th>
-                                    <th>Cantidad de Artículos Vendidos</th>
-                                    <th>Costo Total</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>${data.response.totalFacturas}</td>
-                                    <td>${data.response.cantidadArticulosVendidos}</td>
-                                    <td>${data.response.costoTotal.toFixed(2)}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    `;
+                            <thead><tr><th>Total de Facturas</th><th>Cantidad de Artículos Vendidos</th><th>Costo Total</th></tr></thead>
+                            <tbody><tr><td>${data.response.totalFacturas}</td><td>${data.response.cantidadArticulosVendidos}</td><td>${data.response.costoTotal.toFixed(2)}</td></tr></tbody>
+                        </table>`;
                 } else {
-                    document.getElementById("resultado").innerHTML = `<p>No se encontró el resumen de facturas.</p>`;
+                    document.getElementById("resultadoFacturas").innerHTML = `<p>No se encontró el resumen de facturas.</p>`;
                 }
             } catch (error) {
-                document.getElementById("resultado").innerHTML = `<p>Error: ${error.message}</p>`;
+                document.getElementById("resultadoFacturas").innerHTML = `<p>Error: ${error.message}</p>`;
             }
+        }
+
+        // Función para obtener el resumen de vendedores
+        async function obtenerResumenVendedores() {
+            const fechaInicio = document.getElementById("fechaInicio").value;
+            const fechaFin = document.getElementById("fechaFin").value;
+            if (!fechaInicio || !fechaFin) {
+                alert("Por favor, ingrese ambas fechas.");
+                return;
+            }
+
+            const url = `http://localhost:5009/api/Vendedores/ResumenVendedores?fechaInicio=${fechaInicio}&fechaFin=${fechaFin}`;
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(`Error en la solicitud: ${response.statusText}`);
+
+                const data = await response.json();
+                if (data.mensaje === "ok" && data.response) {
+                    document.getElementById("resultadoVendedores").innerHTML = `
+                        <h3>Resumen de Vendedores</h3>
+                        <table class="custom-table">
+                            <thead><tr><th>Nombre del Vendedor</th><th>Cantidad de Artículos Vendidos</th><th>Total de Ventas</th></tr></thead>
+                            <tbody>${data.response.map(vendedor => `<tr><td>${vendedor.nombre} ${vendedor.apellido}</td><td>${vendedor.cantidadArticulosVendidos}</td><td>${vendedor.totalVentas.toFixed(2)}</td></tr>`).join('')}</tbody>
+                        </table>`;
+                } else {
+                    document.getElementById("resultadoVendedores").innerHTML = `<p>No se encontró el resumen de vendedores.</p>`;
+                }
+            } catch (error) {
+                document.getElementById("resultadoVendedores").innerHTML = `<p>Error: ${error.message}</p>`;
+            }
+        }
+
+        // Función para obtener el resumen de ventas
+        async function obtenerResumenVentas() {
+            const fechaInicio = document.getElementById('fechaInicio').value;
+            const fechaFin = document.getElementById('fechaFin').value;
+            const nacionalidadCliente = document.getElementById('nacionalidadCliente').value;
+            const precioMinimo = document.getElementById('precioMinimo').value;
+            const metodosPago = document.getElementById('metodosPago').value;
+            const url = `http://localhost:5009/api/Ventas/ResumenVentasVendedores?fechaInicio=${fechaInicio}&fechaFin=${fechaFin}&nacionalidadCliente=${nacionalidadCliente}&precioMinimo=${precioMinimo}&metodosPago=${metodosPago}`;
+
+            try {
+                const respuesta = await fetch(url, { method: 'GET', headers: { 'Content-Type': 'application/json' } });
+                if (!respuesta.ok) throw new Error(`Error en la solicitud: ${respuesta.statusText}`);
+
+                const datos = await respuesta.json();
+                const resumenVentas = datos.response;
+
+                if (Array.isArray(resumenVentas) && resumenVentas.length > 0) {
+                    mostrarDatos(resumenVentas);
+                } else {
+                    document.getElementById('resultado').textContent = 'No se encontraron datos para el resumen de ventas.';
+                }
+            } catch (error) {
+                document.getElementById('resultado').textContent = `Error: ${error.message}`;
+            }
+        }
+
+        // Mostrar datos en la tabla de resumen de ventas
+        function mostrarDatos(datos) {
+            const resultado = document.getElementById('resultado');
+            resultado.innerHTML = '<h3>Resumen de Ventas</h3>';
+
+            const tabla = document.createElement('table');
+            tabla.classList.add('custom-table');
+            const encabezado = document.createElement('tr');
+
+            ['Vendedor', 'Cantidad de Artículos Vendidos', 'Monto Total de Ventas'].forEach(header => {
+                const th = document.createElement('th');
+                th.textContent = header;
+                encabezado.appendChild(th);
+            });
+            tabla.appendChild(encabezado);
+
+            datos.forEach(item => {
+                const fila = document.createElement('tr');
+                fila.innerHTML = `<td>${item.sellerName}</td><td>${item.totalItemsSold}</td><td>${item.totalSalesAmount}</td>`;
+                tabla.appendChild(fila);
+            });
+
+            resultado.appendChild(tabla);
         }
     </script>
 </body>

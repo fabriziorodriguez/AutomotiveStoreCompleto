@@ -40,7 +40,7 @@ namespace AutomotiveStore.Controllers
 
                     using (var reader = cmd.ExecuteReader())
                     {
-                        if (reader.Read())
+                        while (reader.Read())
                         {
                             resultado.Add(new ServicioAdicional()
                             {

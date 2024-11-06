@@ -9,13 +9,13 @@
         #formulario {
             margin-top: 20px;
             padding: 20px;
-            background-color: #6c757d;
-            color: white;
+            background-color: #f98d6b;
+            color: black;
             border-radius: 8px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
         .form-group label, .form-group input {
-            color: white;
+            color: black;
         }
 
         /* Estilo de la tabla */
@@ -81,7 +81,7 @@
 
                 if (respuesta.ok) {
                     const datos = await respuesta.json();
-                    const servicios = datos.Response;
+                    const servicios = datos.response; // Cambiar a "response" en minúscula
 
                     if (Array.isArray(servicios) && servicios.length > 0) {
                         mostrarDatos(servicios);
@@ -119,15 +119,15 @@
                 const fila = document.createElement('tr');
                 
                 const tdId = document.createElement('td');
-                tdId.textContent = item.Id;
+                tdId.textContent = item.id; // Asegúrate de usar "id" en minúscula
                 fila.appendChild(tdId);
 
                 const tdServicio = document.createElement('td');
-                tdServicio.textContent = item.DescripcionServicio;
+                tdServicio.textContent = item.descripcionServicio; // "descripcionServicio" en minúscula
                 fila.appendChild(tdServicio);
 
                 const tdCantidad = document.createElement('td');
-                tdCantidad.textContent = item.Cantidad;
+                tdCantidad.textContent = item.cantidad; // "cantidad" en minúscula
                 fila.appendChild(tdCantidad);
 
                 tabla.appendChild(fila);

@@ -1,41 +1,73 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\admin\\source\\repos\\AutomotiveStore\\",
+  "WorkspaceRootPath": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\source\\repos\\automotivestore\\automotivestore\\controllers\\servicioadicionalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|solutionrelative:automotivestore\\controllers\\servicioadicionalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\desktop\\automotive\\automotivestorecompleto\\back\\automotivestore\\automotivestore\\controllers\\ventascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|solutionrelative:automotivestore\\controllers\\ventascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\source\\repos\\automotivestore\\automotivestore\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\desktop\\automotive\\automotivestorecompleto\\back\\automotivestore\\automotivestore\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|solutionrelative:automotivestore\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\source\\repos\\automotivestore\\automotivestore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|solutionrelative:automotivestore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\source\\repos\\automotivestore\\automotivestore\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|solutionrelative:automotivestore\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\source\\repos\\automotivestore\\automotivestore\\models\\servicioadicional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|solutionrelative:automotivestore\\models\\servicioadicional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\source\\repos\\automotivestore\\automotivestore\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|solutionrelative:automotivestore\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\source\\repos\\automotivestore\\automotivestore\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\desktop\\automotive\\automotivestorecompleto\\back\\automotivestore\\automotivestore\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|solutionrelative:automotivestore\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\source\\repos\\automotivestore\\automotivestore\\automotivestore.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\desktop\\automotive\\automotivestorecompleto\\back\\automotivestore\\automotivestore\\models\\vendedorventasresumen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|solutionrelative:automotivestore\\models\\vendedorventasresumen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\desktop\\automotive\\automotivestorecompleto\\back\\automotivestore\\automotivestore\\controllers\\vendedorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|solutionrelative:automotivestore\\controllers\\vendedorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\desktop\\automotive\\automotivestorecompleto\\back\\automotivestore\\automotivestore\\models\\vendedorresumen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|solutionrelative:automotivestore\\models\\vendedorresumen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\desktop\\automotive\\automotivestorecompleto\\back\\automotivestore\\automotivestore\\models\\articuloresumen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|solutionrelative:automotivestore\\models\\articuloresumen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\desktop\\automotive\\automotivestorecompleto\\back\\automotivestore\\automotivestore\\models\\servicioadicional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|solutionrelative:automotivestore\\models\\servicioadicional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\desktop\\automotive\\automotivestorecompleto\\back\\automotivestore\\automotivestore\\models\\resumenfacturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|solutionrelative:automotivestore\\models\\resumenfacturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\desktop\\automotive\\automotivestorecompleto\\back\\automotivestore\\automotivestore\\controllers\\articuloresumencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|solutionrelative:automotivestore\\controllers\\articuloresumencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\desktop\\automotive\\automotivestorecompleto\\back\\automotivestore\\automotivestore\\controllers\\resumenfacturascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|solutionrelative:automotivestore\\controllers\\resumenfacturascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\desktop\\automotive\\automotivestorecompleto\\back\\automotivestore\\automotivestore\\controllers\\servicioadicionalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|solutionrelative:automotivestore\\controllers\\servicioadicionalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\desktop\\automotive\\automotivestorecompleto\\back\\automotivestore\\automotivestore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|solutionrelative:automotivestore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\desktop\\automotive\\automotivestorecompleto\\back\\automotivestore\\automotivestore\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|solutionrelative:automotivestore\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\desktop\\automotive\\automotivestorecompleto\\back\\automotivestore\\automotivestore\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|solutionrelative:automotivestore\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\desktop\\automotive\\automotivestorecompleto\\back\\automotivestore\\automotivestore\\automotivestore.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|solutionrelative:automotivestore\\automotivestore.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\source\\repos\\automotivestore\\automotivestore\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|c:\\users\\admin\\desktop\\automotive\\automotivestorecompleto\\back\\automotivestore\\automotivestore\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F8512833-640D-4C3A-9FC6-D1FBA263F00D}|AutomotiveStore\\AutomotiveStore.csproj|solutionrelative:automotivestore\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -51,96 +83,202 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ServicioAdicionalController.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\AutomotiveStore\\AutomotiveStore\\Controllers\\ServicioAdicionalController.cs",
-              "RelativeDocumentMoniker": "AutomotiveStore\\Controllers\\ServicioAdicionalController.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\AutomotiveStore\\AutomotiveStore\\Controllers\\ServicioAdicionalController.cs",
-              "RelativeToolTip": "AutomotiveStore\\Controllers\\ServicioAdicionalController.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
+              "Title": "VentasController.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Controllers\\VentasController.cs",
+              "RelativeDocumentMoniker": "AutomotiveStore\\Controllers\\VentasController.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Controllers\\VentasController.cs",
+              "RelativeToolTip": "AutomotiveStore\\Controllers\\VentasController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T19:14:21.937Z",
+              "WhenOpened": "2024-11-06T00:31:49.026Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ServicioAdicional.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\AutomotiveStore\\AutomotiveStore\\Models\\ServicioAdicional.cs",
-              "RelativeDocumentMoniker": "AutomotiveStore\\Models\\ServicioAdicional.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\AutomotiveStore\\AutomotiveStore\\Models\\ServicioAdicional.cs",
-              "RelativeToolTip": "AutomotiveStore\\Models\\ServicioAdicional.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAApAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "ResumenFacturas.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Models\\ResumenFacturas.cs",
+              "RelativeDocumentMoniker": "AutomotiveStore\\Models\\ResumenFacturas.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Models\\ResumenFacturas.cs",
+              "RelativeToolTip": "AutomotiveStore\\Models\\ResumenFacturas.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T19:12:55.383Z"
+              "WhenOpened": "2024-11-03T15:31:35.8Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\AutomotiveStore\\AutomotiveStore\\appsettings.json",
-              "RelativeDocumentMoniker": "AutomotiveStore\\appsettings.json",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\AutomotiveStore\\AutomotiveStore\\appsettings.json",
-              "RelativeToolTip": "AutomotiveStore\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-29T20:52:41.11Z"
+              "DocumentIndex": 7,
+              "Title": "ServicioAdicional.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Models\\ServicioAdicional.cs",
+              "RelativeDocumentMoniker": "AutomotiveStore\\Models\\ServicioAdicional.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Models\\ServicioAdicional.cs",
+              "RelativeToolTip": "AutomotiveStore\\Models\\ServicioAdicional.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T19:12:55.383Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\AutomotiveStore\\AutomotiveStore\\Program.cs",
-              "RelativeDocumentMoniker": "AutomotiveStore\\Program.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\AutomotiveStore\\AutomotiveStore\\Program.cs",
-              "RelativeToolTip": "AutomotiveStore\\Program.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACUAAAB/AAAAAAAAAA==",
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Models\\Producto.cs",
+              "RelativeDocumentMoniker": "AutomotiveStore\\Models\\Producto.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Models\\Producto.cs",
+              "RelativeToolTip": "AutomotiveStore\\Models\\Producto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T01:50:51.429Z"
+              "WhenOpened": "2024-10-29T20:47:51.55Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "ProductoController.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\AutomotiveStore\\AutomotiveStore\\Controllers\\ProductoController.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Controllers\\ProductoController.cs",
               "RelativeDocumentMoniker": "AutomotiveStore\\Controllers\\ProductoController.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\AutomotiveStore\\AutomotiveStore\\Controllers\\ProductoController.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Controllers\\ProductoController.cs",
               "RelativeToolTip": "AutomotiveStore\\Controllers\\ProductoController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKEAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAANcAAAAAAAAAAAAswOIAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-29T20:46:18.588Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VendedoresController.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Controllers\\VendedoresController.cs",
+              "RelativeDocumentMoniker": "AutomotiveStore\\Controllers\\VendedoresController.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Controllers\\VendedoresController.cs",
+              "RelativeToolTip": "AutomotiveStore\\Controllers\\VendedoresController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T23:50:12.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VendedorVentasResumen.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Models\\VendedorVentasResumen.cs",
+              "RelativeDocumentMoniker": "AutomotiveStore\\Models\\VendedorVentasResumen.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Models\\VendedorVentasResumen.cs",
+              "RelativeToolTip": "AutomotiveStore\\Models\\VendedorVentasResumen.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T00:32:47.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ArticuloResumen.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Models\\ArticuloResumen.cs",
+              "RelativeDocumentMoniker": "AutomotiveStore\\Models\\ArticuloResumen.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Models\\ArticuloResumen.cs",
+              "RelativeToolTip": "AutomotiveStore\\Models\\ArticuloResumen.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T16:24:14.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "VendedorResumen.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Models\\VendedorResumen.cs",
+              "RelativeDocumentMoniker": "AutomotiveStore\\Models\\VendedorResumen.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Models\\VendedorResumen.cs",
+              "RelativeToolTip": "AutomotiveStore\\Models\\VendedorResumen.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T23:34:47.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ArticuloResumenController.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Controllers\\ArticuloResumenController.cs",
+              "RelativeDocumentMoniker": "AutomotiveStore\\Controllers\\ArticuloResumenController.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Controllers\\ArticuloResumenController.cs",
+              "RelativeToolTip": "AutomotiveStore\\Controllers\\ArticuloResumenController.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAYwAwAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T16:25:36.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ServicioAdicionalController.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Controllers\\ServicioAdicionalController.cs",
+              "RelativeDocumentMoniker": "AutomotiveStore\\Controllers\\ServicioAdicionalController.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Controllers\\ServicioAdicionalController.cs",
+              "RelativeToolTip": "AutomotiveStore\\Controllers\\ServicioAdicionalController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwDIAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T19:14:21.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ResumenFacturasController.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Controllers\\ResumenFacturasController.cs",
+              "RelativeDocumentMoniker": "AutomotiveStore\\Controllers\\ResumenFacturasController.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Controllers\\ResumenFacturasController.cs",
+              "RelativeToolTip": "AutomotiveStore\\Controllers\\ResumenFacturasController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T15:33:03.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Program.cs",
+              "RelativeDocumentMoniker": "AutomotiveStore\\Program.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Program.cs",
+              "RelativeToolTip": "AutomotiveStore\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T01:50:51.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\appsettings.json",
+              "RelativeDocumentMoniker": "AutomotiveStore\\appsettings.json",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\appsettings.json",
+              "RelativeToolTip": "AutomotiveStore\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-29T20:52:41.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\AutomotiveStore\\AutomotiveStore\\Properties\\launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "AutomotiveStore\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\AutomotiveStore\\AutomotiveStore\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Properties\\launchSettings.json",
               "RelativeToolTip": "AutomotiveStore\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAuAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-10-31T20:47:23.573Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Producto.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\AutomotiveStore\\AutomotiveStore\\Models\\Producto.cs",
-              "RelativeDocumentMoniker": "AutomotiveStore\\Models\\Producto.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\AutomotiveStore\\AutomotiveStore\\Models\\Producto.cs",
-              "RelativeToolTip": "AutomotiveStore\\Models\\Producto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T20:47:51.55Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\AutomotiveStore\\AutomotiveStore\\Controllers\\WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "AutomotiveStore\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\AutomotiveStore\\AutomotiveStore\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\Controllers\\WeatherForecastController.cs",
               "RelativeToolTip": "AutomotiveStore\\Controllers\\WeatherForecastController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -148,11 +286,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "AutomotiveStore.csproj",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\AutomotiveStore\\AutomotiveStore\\AutomotiveStore.csproj",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\AutomotiveStore.csproj",
               "RelativeDocumentMoniker": "AutomotiveStore\\AutomotiveStore.csproj",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\AutomotiveStore\\AutomotiveStore\\AutomotiveStore.csproj",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\AutomotiveStore.csproj",
               "RelativeToolTip": "AutomotiveStore\\AutomotiveStore.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",

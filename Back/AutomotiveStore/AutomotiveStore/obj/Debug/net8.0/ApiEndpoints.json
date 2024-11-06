@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "AutomotiveStore.Controllers.ArticuloResumenController",
+    "Method": "ObtenerResumenArticulos",
+    "RelativePath": "api/ArticuloResumen/ResumenArticulos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cantidadMinima",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "letraInicio",
+        "Type": "System.Char",
+        "IsRequired": false
+      },
+      {
+        "Name": "letraFin",
+        "Type": "System.Char",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AutomotiveStore.Controllers.ProductoController",
     "Method": "Editar",
     "RelativePath": "api/Producto/Editar",
@@ -90,6 +116,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AutomotiveStore.Controllers.ResumenFacturasController",
+    "Method": "ObtenerResumenFacturas",
+    "RelativePath": "api/ResumenFacturas/ContarFacturas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mes",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AutomotiveStore.Controllers.ServicioAdicionalController",
     "Method": "ObtenerTopServicioAdicional",
     "RelativePath": "api/ServicioAdicional/TopServicioAdicional",
@@ -105,6 +152,63 @@
       {
         "Name": "endMonth",
         "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AutomotiveStore.Controllers.VendedoresController",
+    "Method": "ObtenerResumenVendedores",
+    "RelativePath": "api/Vendedores/ResumenVendedores",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AutomotiveStore.Controllers.VentasController",
+    "Method": "ObtenerResumenVentasVendedores",
+    "RelativePath": "api/Ventas/ResumenVentasVendedores",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "nacionalidadCliente",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "precioMinimo",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "metodosPago",
+        "Type": "System.String",
         "IsRequired": false
       }
     ],

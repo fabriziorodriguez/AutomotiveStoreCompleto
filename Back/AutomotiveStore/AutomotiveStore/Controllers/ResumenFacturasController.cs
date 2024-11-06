@@ -18,7 +18,7 @@ namespace AutomotiveStore.Controllers
         }
 
         [HttpGet]
-        [Route("ResumenFacturas")]
+        [Route("ContarFacturas")]
         public IActionResult ObtenerResumenFacturas(int mes, int? anio = null)
         {
             var resultado = new ResumenFacturas();

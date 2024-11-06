@@ -950,19 +950,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
+    "C:\\Users\\admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\TP BASE DE DATOS\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\AutomotiveStore.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\AutomotiveStore.csproj",
       "projectName": "AutomotiveStore",
-      "projectPath": "C:\\Users\\Usuario\\Desktop\\TP BASE DE DATOS\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\AutomotiveStore.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\Desktop\\TP BASE DE DATOS\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\obj\\",
+      "projectPath": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\AutomotiveStore.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\admin\\Desktop\\Automotive\\AutomotiveStoreCompleto\\Back\\AutomotiveStore\\AutomotiveStore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1026,7 +1026,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
